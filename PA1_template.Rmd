@@ -8,6 +8,14 @@ output:
 
 ## Loading and preprocessing the data
 
+First check to make sure file isn't already unzipped.  If it isn't, then unzip.  If it is, read it in.
+
+```{r}
+if(!file.exists('activity.csv')){
+    unzip('activity.zip')
+}
+dat = read.csv('activity.csv', header = T)
+```
 
 
 ## What is mean total number of steps taken per day?
